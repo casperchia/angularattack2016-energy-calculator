@@ -1,4 +1,9 @@
+import {Power} from "./Power";
+import {Time} from "./Time";
+
 export class Appliance{
-  value:number;
-  units:string;
+  name: string;
+  power: Power;
+  duration: Time;
+  cost: number;
 }

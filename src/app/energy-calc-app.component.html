@@ -1,4 +1,5 @@
 <h1>
   {{title}}
-  <appliance-dropdown></appliance-dropdown>
+  <dropdown [choices]="applianceList" [inputModel]="appliance.name" (inputChange)="appliance.name = $event"></dropdown>
 </h1>
+{{diagnostic}}
