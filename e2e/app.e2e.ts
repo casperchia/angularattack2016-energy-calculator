@@ -1,14 +1,14 @@
-import { Object2Page } from './app.po';
+import { EnergyCalcAppPage } from './app.po';
 
-describe('object2 App', function() {
-  let page: Object2Page;
+describe('energy-calc-app App', function() {
+  let page: EnergyCalcAppPage;
 
   beforeEach(() => {
-    page = new Object2Page();
+    page = new EnergyCalcAppPage();
   })
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('object2 works!');
+    expect(page.getParagraphText()).toEqual('energy-calc-app works!');
   });
 });

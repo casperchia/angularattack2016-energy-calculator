@@ -1,9 +1,9 @@
-export class Object2Page {
+export class EnergyCalcAppPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('object2-app h1')).getText();
+    return element(by.css('energy-calc-app-app h1')).getText();
   }
 }
