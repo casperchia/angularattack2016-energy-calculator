@@ -6,4 +6,8 @@ export class Appliance{
   power: Power = new Power();
   duration: Time = new Time();
   cost: number;
+  costDaily: number;
+  costMonthly: number;
+  costQuarterly: number;
+  costYearly: number;
 }
