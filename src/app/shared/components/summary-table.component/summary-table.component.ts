@@ -34,8 +34,8 @@ export class SummaryTableComponent implements OnInit, OnChanges{
       for(let i=0; i < appliances.length; i++){
         this.dailyCostTotal = this.dailyCostTotal + this.appliances[i].cost;
         this.monthlyCostTotal = this.monthlyCostTotal + (this.appliances[i].cost *30);
-        this.quarterlyCostTotal = this.quarterlyCostTotal + (this.appliances[i].cost * 90);
-        this.yearlyCostTotal = this.yearlyCostTotal + (this.appliances[i].cost * 360);
+        this.quarterlyCostTotal = this.quarterlyCostTotal + (this.appliances[i].cost * 91);
+        this.yearlyCostTotal = this.yearlyCostTotal + (this.appliances[i].cost * 365);
       }
         console.log(this.dailyCostTotal);
     }
