@@ -1,12 +1,14 @@
-import {Component, OnInit, Input, OnChanges} from '@angular/core';
+import {Component, OnInit, Input, Output, OnChanges, EventEmitter} from '@angular/core';
 import {Appliance} from "../../../shared/model/Appliance";
+import {CostCalculatorPipe} from "../../input/pipes/CostCalculatorPipe"
 
 @Component({
     moduleId: module.id,
     selector: 'cost',
     templateUrl: 'cost.component.html',
     styleUrls: ['cost.component.css'],
-    directives: []
+    directives: [],
+    pipes: [CostCalculatorPipe]
 })
 
 export class CostComponent implements OnInit, OnChanges{
@@ -16,6 +18,7 @@ export class CostComponent implements OnInit, OnChanges{
     @Input() hours: number = 0;
     @Input() minutes: number = 0;
     @Input() rates: number = 0;
+    @Output() trigger: EventEmitter<any> = new EventEmitter();
 
     ngOnInit(){
     }
@@ -34,6 +37,7 @@ export class CostComponent implements OnInit, OnChanges{
         }
         let h = ((this.hours * 60) + this.minutes) / 60;
         let cost = h * p * this.rates;
+        this.trigger.emit("");
         return cost;
     }
 

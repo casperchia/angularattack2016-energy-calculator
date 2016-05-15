@@ -3,9 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({name: 'costCalculator'})
 export class CostCalculatorPipe implements PipeTransform {
   transform(value: number, duration: number): string {
-    return this.formatCost(this.roundDecimal(
-                              isNaN(value) ? 0 : value*duration
-                                ));
+    return this.formatCost(this.roundDecimal(isNaN(value) ? 0 : value*duration));
   }
 
   roundDecimal(cost: number) : any{

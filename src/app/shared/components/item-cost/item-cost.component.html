@@ -31,7 +31,8 @@
               [units]="appliance?.power?.units"
               [hours]="appliance?.duration?.hours"
               [minutes]="appliance?.duration?.minutes"
-              [rates]="rates">
+              [rates]="rates"
+              (trigger)="onTrigger()">
         </cost>
     </div>
 </div>

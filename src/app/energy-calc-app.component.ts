@@ -16,6 +16,7 @@ import {SummaryTableComponent} from "./shared/components/summary-table.component
 export class EnergyCalcAppAppComponent implements OnInit{
   title = 'Electricity Calculator';
   appliances: Appliance[] = [];
+  trigger = {};
 
 
   ngOnInit(){
@@ -27,5 +28,9 @@ export class EnergyCalcAppAppComponent implements OnInit{
   }
 
   get diagnostic() { return JSON.stringify(this.appliances, null, 4); }
+
+  onTrigger(){
+    this.trigger = {};
+  }
 
 }

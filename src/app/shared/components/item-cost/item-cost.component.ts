@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {DropdownComponent} from "../../input/dropdown/dropdown.component";
 import {Appliance} from "../../../shared/model/Appliance";
 import {NumericInputComponent} from "../../../shared/input/numeric/numeric-input.component";
@@ -15,6 +15,7 @@ import {CostComponent} from "../cost/cost.component";
 
 export class ItemCostComponent implements OnInit{
     @Input() appliance: Appliance;
+    @Output() trigger: EventEmitter<any> = new EventEmitter();
     applianceList: string[] = [
         'TV/Monitor',
         'Lightbulb',
@@ -30,5 +31,9 @@ export class ItemCostComponent implements OnInit{
     }
 
     get diagnostic() { return JSON.stringify(this.appliance, null, 4); }
+
+    onTrigger(){
+        this.trigger.emit("");
+    }
 
 }
