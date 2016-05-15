@@ -1,5 +1,7 @@
 <h1>
   {{title}}
-  <dropdown [choices]="applianceList" [inputModel]="appliance.name" (inputChange)="appliance.name = $event"></dropdown>
 </h1>
-{{diagnostic}}
+
+<item-cost></item-cost>
+
+<summary-table [appliances]="appliances"></summary-table>
