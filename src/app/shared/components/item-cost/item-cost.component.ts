@@ -3,13 +3,14 @@ import {DropdownComponent} from "../../input/dropdown/dropdown.component";
 import {Appliance} from "../../../shared/model/Appliance";
 import {NumericInputComponent} from "../../../shared/input/numeric/numeric-input.component";
 import {NumericDropdownComponent} from "../../../shared/input/numeric-dropdown/numeric-dropdown.component";
+import {CostComponent} from "../cost/cost.component";
 
 @Component({
     moduleId: module.id,
     selector: 'item-cost',
     templateUrl: 'item-cost.component.html',
     styleUrls: ['item-cost.component.css'],
-    directives: [DropdownComponent, NumericInputComponent, NumericDropdownComponent]
+    directives: [DropdownComponent, NumericInputComponent, NumericDropdownComponent, CostComponent]
 })
 
 export class ItemCostComponent implements OnInit{
@@ -23,6 +24,7 @@ export class ItemCostComponent implements OnInit{
         'W',
         'kW',
     ]
+    rates: number = 0.33;
 
     ngOnInit(){
     }

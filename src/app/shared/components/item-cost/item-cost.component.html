@@ -15,7 +15,13 @@
     <numeric-dropdown [(inputModel)]="appliance.duration.minutes" [min]="0" [max]="59"></numeric-dropdown>
 
     <label>Cost</label>
-    <!--<cost [appliance]="appliance.name"></cost>-->
+    <cost [appliance]="appliance"
+          [powerValue]="appliance?.power?.value"
+          [units]="appliance?.power?.units"
+          [hours]="appliance?.duration?.hours"
+          [minutes]="appliance?.duration?.minutes"
+          [rates]="rates">
+    </cost>
 </div>
 
 <!--{{diagnostic}}-->
