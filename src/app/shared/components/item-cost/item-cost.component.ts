@@ -19,7 +19,25 @@ export class ItemCostComponent implements OnInit{
     applianceList: string[] = [
         'TV/Monitor',
         'Lightbulb',
-        'Washing Machine'
+        'Washing Machine',
+        'CFL Light Bulb',
+        'Incandescent Bulb',
+        'LCD/LED TV/Display',
+        'CRT Monitor',
+        'Game Console',
+        'Desktop Computer',
+        'Laptop/Notebook',
+        'Wi-Fi Router',
+        'Printer',
+        'DVR',
+        'Cell Phone Charger',
+        'Cordless Phone',
+        'Alarm Clock Radio',
+        'Space Heater',
+        'Water Heater',
+        'Central Air Conditioner',
+        'Air Conditioner',
+        'Clothes Washer'
     ]
     unitList: string[] = [
         'W',
