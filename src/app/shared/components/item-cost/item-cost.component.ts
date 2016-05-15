@@ -43,7 +43,7 @@ export class ItemCostComponent implements OnInit{
         'W',
         'kW',
     ]
-    rates: number = 33;
+    rates: number = 0.33;
 
     ngOnInit(){
     }
