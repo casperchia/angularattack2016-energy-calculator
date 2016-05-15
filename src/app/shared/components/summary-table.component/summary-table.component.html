@@ -13,8 +13,8 @@
         <td>{{appliance.name}}</td>
         <td>{{appliance.power.value}}</td>
         <td>{{appliance.cost}}</td>
-        <td>{{appliance.costMonthly}}</td>
-        <td>{{appliance.costQuarterly}}</td>
-        <td>{{appliance.costYearly}}</td>
+        <td>{{appliance.cost | costCalculator:30}}</td>
+        <td>{{appliance.cost | costCalculator:90}}</td>
+        <td>{{appliance.cost | costCalculator:360}}</td>
     </tr>
 </table>
