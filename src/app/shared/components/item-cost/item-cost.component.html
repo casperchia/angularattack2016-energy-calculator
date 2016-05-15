@@ -6,13 +6,13 @@
     <numeric-input [inputModel]="appliance.power.value" (inputChange)="appliance.power.value = $event"></numeric-input>
 
     <label>Units</label>
-    <dropdown></dropdown>
+    <dropdown [choices]="unitList" [inputModel]="appliance.power.units" (inputChange)="appliance.power.units = $event" [default]="false"></dropdown>
 
     <label>Hours</label>
-    <dropdown></dropdown>
+    <numeric-dropdown [inputModel]="appliance.duration.hours" (inputChange)="appliance.duration.hours = $event" [min]="0" [max]="24"></numeric-dropdown>
 
     <label>Minutes</label>
-    <dropdown></dropdown>
+    <numeric-dropdown [inputModel]="appliance.duration.minutes" (inputChange)="appliance.duration.minutes = $event" [min]="0" [max]="59"></numeric-dropdown>
 </div>
 
 <!--{{diagnostic}}-->
