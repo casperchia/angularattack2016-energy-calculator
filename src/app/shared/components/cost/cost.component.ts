@@ -5,7 +5,7 @@ import {Appliance} from "../../../shared/model/Appliance";
     moduleId: module.id,
     selector: 'cost',
     templateUrl: 'cost.component.html',
-    styleUrls: [],
+    styleUrls: ['cost.component.css'],
     directives: []
 })
 

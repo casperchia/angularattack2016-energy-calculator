@@ -14,7 +14,7 @@ import {SummaryTableComponent} from "./shared/components/summary-table.component
 })
 
 export class EnergyCalcAppAppComponent implements OnInit{
-  title = 'energy-calc-app works!';
+  title = 'Electricity Calculator';
   appliances: Appliance[] = [];
 
 

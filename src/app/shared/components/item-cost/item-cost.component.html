@@ -1,27 +1,39 @@
-<div>
-    <label>Appliance</label>
-    <dropdown [choices]="applianceList" [(inputModel)]="appliance.name"></dropdown>
+<div class="form-inline item-box">
+    <div class="form-group">
+        <div class="input-label">Appliance</div>
+        <dropdown [choices]="applianceList" [(inputModel)]="appliance.name"></dropdown>
+    </div>
 
-    <label>Power</label>
-    <numeric-input [(inputModel)]="appliance.power.value"></numeric-input>
+    <div class="form-group">
+        <div class="input-label">Power</div>
+        <numeric-input [(inputModel)]="appliance.power.value"></numeric-input>
+    </div>
 
-    <label>Units</label>
-    <dropdown [choices]="unitList" [(inputModel)]="appliance.power.units" [default]="false"></dropdown>
+    <div class="form-group">
+        <div class="input-label">Units</div>
+      <dropdown [choices]="unitList" [(inputModel)]="appliance.power.units" [default]="false"></dropdown>
+    </div>
 
-    <label>Hours</label>
-    <numeric-dropdown [(inputModel)]="appliance.duration.hours" [min]="0" [max]="24"></numeric-dropdown>
+    <div class="form-group">
+        <div class="input-label">Hours</div>
+        <numeric-dropdown [(inputModel)]="appliance.duration.hours" [min]="0" [max]="24"></numeric-dropdown>
+    </div>
 
-    <label>Minutes</label>
-    <numeric-dropdown [(inputModel)]="appliance.duration.minutes" [min]="0" [max]="59"></numeric-dropdown>
+    <div class="form-group">
+        <div class="input-label">Minutes</div>
+        <numeric-dropdown [(inputModel)]="appliance.duration.minutes" [min]="0" [max]="59"></numeric-dropdown>
+    </div>
 
-    <label>Cost</label>
-    <cost [appliance]="appliance"
-          [powerValue]="appliance?.power?.value"
-          [units]="appliance?.power?.units"
-          [hours]="appliance?.duration?.hours"
-          [minutes]="appliance?.duration?.minutes"
-          [rates]="rates">
-    </cost>
+    <div class="form-group">
+        <div class="input-label">Cost</div>
+        <cost [appliance]="appliance"
+              [powerValue]="appliance?.power?.value"
+              [units]="appliance?.power?.units"
+              [hours]="appliance?.duration?.hours"
+              [minutes]="appliance?.duration?.minutes"
+              [rates]="rates">
+        </cost>
+    </div>
 </div>
 
 <!--{{diagnostic}}-->

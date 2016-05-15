@@ -1,28 +1,28 @@
-<div>Summary table here</div>
-
-<table>
-    <tr>
-        <th>Appliance</th>
-        <th>Power Used</th>
-        <th>Daily</th>
-        <th>Monthly</th>
-        <th>Quarterly</th>
-        <th>Yearly</th>
-    </tr>
-    <tr *ngFor="let appliance of appliances" >
-        <td>{{appliance.name}}</td>
-        <td>{{appliance.power.value}}</td>
-        <td>{{appliance.cost}}</td>
-        <td>{{appliance.cost | costCalculator:30}}</td>
-        <td>{{appliance.cost | costCalculator:90}}</td>
-        <td>{{appliance.cost | costCalculator:360}}</td>
-    </tr>
-    <tr>
-          <td></td>
-          <td></td>
-          <td>{{dailyCostTotal}}</td>
-          <td>{{monthlyCostTotal}}</td>
-          <td>{{quarterlyCostTotal}}</td>
-          <td>{{yearlyCostTotal}}</td>
-    </tr>
-</table>
+<div class="summary-table">
+    <table class="table table-bordered">
+        <tr>
+            <th>Appliance</th>
+            <th>Power Used</th>
+            <th>Daily</th>
+            <th>Monthly</th>
+            <th>Quarterly</th>
+            <th>Yearly</th>
+        </tr>
+        <tr *ngFor="let appliance of appliances" >
+            <td>{{appliance.name}}</td>
+            <td>{{appliance.power.value}}</td>
+            <td>{{appliance.cost}}</td>
+            <td>{{appliance.cost | costCalculator:30}}</td>
+            <td>{{appliance.cost | costCalculator:90}}</td>
+            <td>{{appliance.cost | costCalculator:360}}</td>
+        </tr>
+        <tr>
+              <td></td>
+              <td></td>
+              <td>{{dailyCostTotal}}</td>
+              <td>{{monthlyCostTotal}}</td>
+              <td>{{quarterlyCostTotal}}</td>
+              <td>{{yearlyCostTotal}}</td>
+        </tr>
+    </table>
+</div>

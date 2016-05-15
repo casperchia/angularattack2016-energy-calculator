@@ -1,12 +1,20 @@
-<h1>
-  {{title}}
-</h1>
 
-<item-cost *ngFor="let appliance of appliances" [appliance]="appliance"></item-cost>
+<div class="container">
+  <h1>{{title}}</h1>
 
-<button (click)="addAppliance()">+ Add Appliance</button>
+  <div class="row">
+    <item-cost *ngFor="let appliance of appliances" [appliance]="appliance"></item-cost>
 
-<PRE>{{diagnostic}}</PRE>
+    <button class="btn btn-primary" (click)="addAppliance()">+ Add Appliance</button>
+  </div>
 
-<summary-table [appliances]="appliances"></summary-table>
+
+  <!--<PRE>{{diagnostic}}</PRE>-->
+
+  <div class="row">
+    <summary-table [appliances]="appliances"></summary-table>
+  </div>
+</div>
+
+
 
