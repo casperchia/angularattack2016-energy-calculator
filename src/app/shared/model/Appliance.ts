@@ -3,7 +3,7 @@ import {Time} from "./Time";
 
 export class Appliance{
   name: string;
-  power: Power;
-  duration: Time;
+  power: Power = new Power();
+  duration: Time = new Time();
   cost: number;
 }
