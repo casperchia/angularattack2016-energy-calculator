@@ -1,4 +1,4 @@
 <select (change)="onChange($event.target.value)">
-    <option value="">Please Select</option>
+    <option *ngIf="default" value="">Please Select</option>
     <option *ngFor="let c of choices" [value]="c">{{c}}</option>
 </select>

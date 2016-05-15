@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class DropdownComponent implements OnInit {
     @Input() choices: string[];
     @Input() inputModel;
+    @Input() default: boolean = true;
     @Output() inputChange: EventEmitter<any> = new EventEmitter();
 
     constructor() {}
