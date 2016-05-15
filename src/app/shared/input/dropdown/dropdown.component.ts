@@ -10,7 +10,7 @@ export class DropdownComponent implements OnInit {
     @Input() choices: string[];
     @Input() inputModel;
     @Input() default: boolean = true;
-    @Output() inputChange: EventEmitter<any> = new EventEmitter();
+    @Output() inputModelChange: EventEmitter<any> = new EventEmitter();
 
     constructor() {}
 
@@ -18,6 +18,6 @@ export class DropdownComponent implements OnInit {
     }
 
     onChange(value){
-        this.inputChange.emit(value);
+        this.inputModelChange.emit(value);
     }
 }

@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NumericInputComponent implements OnInit {
     @Input() inputModel;
-    @Output() inputChange: EventEmitter<any> = new EventEmitter();
+    @Output() inputModelChange: EventEmitter<any> = new EventEmitter();
 
     constructor() {}
 
@@ -16,6 +16,6 @@ export class NumericInputComponent implements OnInit {
     }
 
     onChange(value){
-        this.inputChange.emit(value);
+        this.inputModelChange.emit(value);
     }
 }

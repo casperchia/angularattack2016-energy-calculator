@@ -1,18 +1,21 @@
 <div>
     <label>Appliance</label>
-    <dropdown [choices]="applianceList" [inputModel]="appliance.name" (inputChange)="appliance.name = $event"></dropdown>
+    <dropdown [choices]="applianceList" [(inputModel)]="appliance.name"></dropdown>
 
     <label>Power</label>
-    <numeric-input [inputModel]="appliance.power.value" (inputChange)="appliance.power.value = $event"></numeric-input>
+    <numeric-input [(inputModel)]="appliance.power.value"></numeric-input>
 
     <label>Units</label>
-    <dropdown [choices]="unitList" [inputModel]="appliance.power.units" (inputChange)="appliance.power.units = $event" [default]="false"></dropdown>
+    <dropdown [choices]="unitList" [(inputModel)]="appliance.power.units" [default]="false"></dropdown>
 
     <label>Hours</label>
-    <numeric-dropdown [inputModel]="appliance.duration.hours" (inputChange)="appliance.duration.hours = $event" [min]="0" [max]="24"></numeric-dropdown>
+    <numeric-dropdown [(inputModel)]="appliance.duration.hours" [min]="0" [max]="24"></numeric-dropdown>
 
     <label>Minutes</label>
-    <numeric-dropdown [inputModel]="appliance.duration.minutes" (inputChange)="appliance.duration.minutes = $event" [min]="0" [max]="59"></numeric-dropdown>
+    <numeric-dropdown [(inputModel)]="appliance.duration.minutes" [min]="0" [max]="59"></numeric-dropdown>
+
+    <label>Cost</label>
+    <!--<cost [appliance]="appliance.name"></cost>-->
 </div>
 
 <!--{{diagnostic}}-->

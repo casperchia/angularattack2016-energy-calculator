@@ -11,7 +11,7 @@ export class NumericDropdownComponent implements OnInit {
     @Input() inputModel;
     @Input() min = 0;
     @Input() max = 10;
-    @Output() inputChange: EventEmitter<any> = new EventEmitter();
+    @Output() inputModelChange: EventEmitter<any> = new EventEmitter();
     choices: number[] = [];
 
     constructor() {}
@@ -23,6 +23,6 @@ export class NumericDropdownComponent implements OnInit {
     }
 
     onChange(value){
-        this.inputChange.emit(value);
+        this.inputModelChange.emit(value);
     }
 }
