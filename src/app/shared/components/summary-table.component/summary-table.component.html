@@ -1,0 +1,12 @@
+<div>Summary table here</div>
+
+<table>
+    <tr>
+        <th>Appliance</th>
+        <th>Power Rating</th>
+    </tr>
+    <tr *ngFor="let appliance of appliances">
+        <td>{{appliance.name}}</td>
+        <td>{{appliance.power.value}}</td>
+    </tr>
+</table>

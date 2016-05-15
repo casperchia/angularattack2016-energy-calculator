@@ -1,0 +1,5 @@
+<div>
+    <dropdown [choices]="applianceList" [inputModel]="appliance.name" (inputChange)="appliance.name = $event"></dropdown>
+    <numeric-input [inputModel]="appliance.power.value" (inputChange)="appliance.power.value = $event"></numeric-input>
+</div>
+{{diagnostic}}
