@@ -1,5 +1,18 @@
 <div>
+    <label>Appliance</label>
     <dropdown [choices]="applianceList" [inputModel]="appliance.name" (inputChange)="appliance.name = $event"></dropdown>
+
+    <label>Power</label>
     <numeric-input [inputModel]="appliance.power.value" (inputChange)="appliance.power.value = $event"></numeric-input>
+
+    <label>Units</label>
+    <dropdown></dropdown>
+
+    <label>Hours</label>
+    <dropdown></dropdown>
+
+    <label>Minutes</label>
+    <dropdown></dropdown>
 </div>
-{{diagnostic}}
+
+<!--{{diagnostic}}-->

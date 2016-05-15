@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {DropdownComponent} from "../../input/dropdown/dropdown.component";
 import {Appliance} from "../../../shared/model/Appliance";
 import {NumericInputComponent} from "../../../shared/input/numeric/numeric-input.component";
@@ -12,15 +12,14 @@ import {NumericInputComponent} from "../../../shared/input/numeric/numeric-input
 })
 
 export class ItemCostComponent implements OnInit{
+    @Input() appliance: Appliance;
     applianceList: string[] = [
         'TV/Monitor',
         'Lightbulb',
         'Washing Machine'
     ]
-    appliance: Appliance;
 
     ngOnInit(){
-        this.appliance = new Appliance();
     }
 
     get diagnostic() { return JSON.stringify(this.appliance, null, 4); }

@@ -15,13 +15,15 @@ import {SummaryTableComponent} from "./shared/components/summary-table.component
 
 export class EnergyCalcAppAppComponent implements OnInit{
   title = 'energy-calc-app works!';
-  appliances: Appliance[];
+  appliances: Appliance[] = [];
 
 
   ngOnInit(){
-    this.appliances = [];
-    let appliance = new Appliance();
-    this.appliances.push(appliance);
+    this.addAppliance();
+  }
+
+  addAppliance(){
+    this.appliances.push(new Appliance());
   }
 
   get diagnostic() { return JSON.stringify(this.appliances, null, 4); }

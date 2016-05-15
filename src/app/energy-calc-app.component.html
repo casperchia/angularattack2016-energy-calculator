@@ -2,6 +2,11 @@
   {{title}}
 </h1>
 
-<item-cost></item-cost>
+<item-cost *ngFor="let appliance of appliances" [appliance]="appliance"></item-cost>
+
+<button (click)="addAppliance()">+ Add Appliance</button>
+
+<PRE>{{diagnostic}}</PRE>
 
 <summary-table [appliances]="appliances"></summary-table>
+
