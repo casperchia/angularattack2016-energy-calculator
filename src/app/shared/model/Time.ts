@@ -1,4 +1,4 @@
 export class Time{
-  hours:number;
-  minutes:number;
+  hours:number = 0;
+  minutes:number = 0;
 }

@@ -1,6 +1,6 @@
 export class Power{
-  value:number;
-  units:string;
+  value:number = 0;
+  units:string = 'W';
 }
 
 
