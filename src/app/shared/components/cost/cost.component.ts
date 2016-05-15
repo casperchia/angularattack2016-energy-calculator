@@ -24,7 +24,6 @@ export class CostComponent implements OnInit, OnChanges{
     }
 
     ngOnChanges(changes){
-        console.log("Changes");
         this.appliance.cost = this.calculateCost();
     }
 
@@ -35,8 +34,9 @@ export class CostComponent implements OnInit, OnChanges{
         }else{
             p = this.powerValue;
         }
-        let h = ((this.hours * 60) + this.minutes) / 60;
-        let cost = h * p * this.rates;
+        let totalMinutes = Number(this.hours * 60) + Number(this.minutes);
+        let h =  totalMinutes / 60;
+        let cost: number = h * p * this.rates;
         this.trigger.emit("");
         return cost;
     }
